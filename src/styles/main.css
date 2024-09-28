@@ -1,0 +1,72 @@
+.main-container {
+    display: flex;
+    gap: 30px;
+    height: 100%;
+    padding: 1rem;
+}
+
+.cv-example-container {
+    position: relative;
+    display: flex;
+}
+
+.aside {
+    background-color: #082A4D;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 1rem;
+}
+
+
+.first-part{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.first-part h2 {
+    font-size: 2em;
+}
+
+.first-part p {
+    font-weight: 200;
+}
+
+.first-part hr {
+    width: 40px;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    align-self: center;
+    margin-bottom: .5rem;
+}
+
+.profile-img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    align-self: center;
+    margin-top: 30px;
+}
+
+.fullname {
+    margin-top: 1rem;
+}
+
+.contact {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.second-part h2 {
+    margin-bottom: 1rem;
+}
+
+.second-part a {
+    color: white;
+    text-decoration: underline;
+}
