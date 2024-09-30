@@ -22,7 +22,15 @@ function Form(props) {
                 <div>
                     <label>ელ.ფოსტა</label>
                     <input type="text" value={props.email} onChange={props.handleEmail}/>
-                </div>            
+                </div>     
+                <div>
+                    <label>Linkedin</label>
+                    <input type="text" value={props.linkedin} onChange={props.handleLinkedin}/>
+                </div>      
+                <div>
+                    <label>GitHub</label>
+                    <input type="text" value={props.github} onChange={props.handleGithub}/>
+                </div>              
             </form>
         </div>
     )

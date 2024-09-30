@@ -1,7 +1,7 @@
 import Example from "./CvExample";
 import Form from "./Form";
 import React, {useState} from "react";
-import '../styles/main.css';
+import '../styles/cv-example.css';
 
 function Parent() {
 
@@ -9,6 +9,8 @@ function Parent() {
     const [profession, setProfession] = useState("");
     const [tel, setTel] = useState("");
     const [email, setEmail] = useState("");
+    const [linkedin, setLinkedin] = useState("");
+    const [github, setGithub] = useState("");
 
     const handleFullNameChange = (e) => {
         setFullName(e.target.value)
@@ -26,12 +28,22 @@ function Parent() {
         setEmail(e.target.value);
     }
 
+    const handleLinkedinChange = (e) => {
+        setLinkedin(e.target.value);
+    }
+
+    const handleGithubChange = (e) => {
+        setGithub(e.target.value);
+    }
+
     return(
         <main className="main-container">
             <Example fullName={fullName}
                      profession={profession}
                      tel={tel}
                      email={email}
+                     linkedin={linkedin}
+                     github={github}
                     />
             <Form fullName={fullName}
              handleFullName={handleFullNameChange}
@@ -39,6 +51,8 @@ function Parent() {
              handleProfession={handleProfessionChange}
              handleTel={handleTelChange}
              handleEmail={handleEmailChange}
+             handleLinkedin={handleLinkedinChange}
+             handleGithub={handleGithubChange}
              />
         </main>
     )
