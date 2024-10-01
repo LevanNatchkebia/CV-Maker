@@ -11,6 +11,7 @@ function Parent() {
     const [email, setEmail] = useState("");
     const [linkedin, setLinkedin] = useState("");
     const [github, setGithub] = useState("");
+    const [summary, setSummary] = useState("");
 
     const handleFullNameChange = (e) => {
         setFullName(e.target.value)
@@ -35,6 +36,10 @@ function Parent() {
     const handleGithubChange = (e) => {
         setGithub(e.target.value);
     }
+    
+    const handleSummaryChange = (e) => {
+        setSummary(e.target.value);
+    }
 
     return(
         <main className="main-container">
@@ -44,6 +49,7 @@ function Parent() {
                      email={email}
                      linkedin={linkedin}
                      github={github}
+                     summary={summary}
                     />
             <Form fullName={fullName}
              handleFullName={handleFullNameChange}
@@ -53,6 +59,7 @@ function Parent() {
              handleEmail={handleEmailChange}
              handleLinkedin={handleLinkedinChange}
              handleGithub={handleGithubChange}
+             handleSummary={handleSummaryChange}
              />
         </main>
     )

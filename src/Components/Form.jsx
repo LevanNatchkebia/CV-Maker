@@ -1,8 +1,5 @@
-import React, {useState} from "react";
 
 function Form(props) {
-
-   
 
     return(
         <div>
@@ -30,7 +27,11 @@ function Form(props) {
                 <div>
                     <label>GitHub</label>
                     <input type="text" value={props.github} onChange={props.handleGithub}/>
-                </div>              
+                </div>   
+                <div>
+                    <label>Proffesional Summary</label>
+                    <textarea type="text" value={props.summary} onChange={props.handleSummary}/>
+                </div>           
             </form>
         </div>
     )

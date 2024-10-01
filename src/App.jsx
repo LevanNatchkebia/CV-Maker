@@ -1,17 +1,10 @@
-import { useState } from 'react'
-import Form from './Components/Form'
-import Parent from './Components/Parent';
+import Cv from './Components/Cv';
 
 function App() {
 
-  const [name, setName] = useState("");
-
-  const handleNameChange = (e) => {
-      setName(e.target.value)
-  }
  return(
   <>
-    <Parent/>
+    <Cv/>
   </>
  )
 }
