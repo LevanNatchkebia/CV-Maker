@@ -11,6 +11,7 @@ function Parent() {
     const [email, setEmail] = useState("");
     const [linkedin, setLinkedin] = useState("");
     const [github, setGithub] = useState("");
+    const [language, setLanguage] =useState([""]);
     const [summary, setSummary] = useState("");
 
     const handleFullNameChange = (e) => {
@@ -36,7 +37,22 @@ function Parent() {
     const handleGithubChange = (e) => {
         setGithub(e.target.value);
     }
+
+    const handleAddLanguage = () => {
+        const newLanguage = document.getElementById("languageInput").value.trim(); // Trim whitespace
     
+        if (newLanguage) { // Check if the newLanguage is not empty
+            setLanguage(l => [...l, newLanguage]);
+            document.getElementById("languageInput").value = ""; // Clear the input
+        }
+    };
+    
+    
+    const handleRemoveLanguage = (index) => {
+
+        setLanguage(language.filter((_, i) => i !== index));
+    }
+
     const handleSummaryChange = (e) => {
         setSummary(e.target.value);
     }
@@ -49,18 +65,22 @@ function Parent() {
                      email={email}
                      linkedin={linkedin}
                      github={github}
+                     languages={language}
                      summary={summary}
-                    />
-            <Form fullName={fullName}
-             handleFullName={handleFullNameChange}
-             profession={profession}
-             handleProfession={handleProfessionChange}
-             handleTel={handleTelChange}
-             handleEmail={handleEmailChange}
-             handleLinkedin={handleLinkedinChange}
-             handleGithub={handleGithubChange}
-             handleSummary={handleSummaryChange}
-             />
+                     handleRemoveLanguage={handleRemoveLanguage}
+
+                />
+            <Form   fullName={fullName}
+                    handleFullName={handleFullNameChange}
+                    profession={profession}
+                    handleProfession={handleProfessionChange}
+                    handleTel={handleTelChange}
+                    handleEmail={handleEmailChange}
+                    handleLinkedin={handleLinkedinChange}
+                    handleGithub={handleGithubChange}
+                    handleSummary={handleSummaryChange}
+                    handleAddLanguage={handleAddLanguage}
+                />
         </main>
     )
 }

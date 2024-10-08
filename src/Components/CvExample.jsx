@@ -13,6 +13,8 @@ function Example(props) {
                 email={props.email}
                 linkedin={props.linkedin}
                 github={props.github}
+                languages={props.languages}
+                handleRemoveLanguage={props.handleRemoveLanguage}
                 />
             <Main 
                 summary={props.summary}

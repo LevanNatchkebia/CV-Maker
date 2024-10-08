@@ -80,3 +80,13 @@
     font-weight: 400;
     margin-bottom: 1rem;
 }
+
+.language_section ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.language_section li {
+    list-style-type: none;
+}

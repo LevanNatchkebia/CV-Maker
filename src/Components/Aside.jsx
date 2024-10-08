@@ -3,6 +3,10 @@ import Lion from '../assets/lion.jpg';
 
 function Aside(props){
 
+
+    const languages = props.languages;
+
+
     return (
         <aside className="aside">
             <div className='first-part'>
@@ -55,6 +59,21 @@ function Aside(props){
                         </a>
                     </p>
                 )}
+            </div>
+            <div className='language_section'>
+                {languages && languages.length > 1 && (
+                    <>
+                        <h2>ენები</h2>
+                        <ul>
+                            {languages.map((language, index) => 
+                                <li key={index} onClick={() => props.handleRemoveLanguage(index)}>
+                                    {language}
+                                </li>
+                            )}
+                        </ul>
+                    </>
+                )}
+
             </div>
         </aside>
     )

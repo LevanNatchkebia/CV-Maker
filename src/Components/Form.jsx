@@ -14,7 +14,7 @@ function Form(props) {
                 </div>
                 <div>
                     <label>ტელეფონის ნომერი</label>
-                    <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  value={props.tel} onChange={props.handleTel}/>
+                    <input type="tel"  value={props.tel} onChange={props.handleTel}/>
                 </div>    
                 <div>
                     <label>ელ.ფოსტა</label>
@@ -31,7 +31,19 @@ function Form(props) {
                 <div>
                     <label>Proffesional Summary</label>
                     <textarea type="text" value={props.summary} onChange={props.handleSummary}/>
-                </div>           
+                </div>       
+                
+                <div className="languages_list">
+                    <div>
+                        <label>Language</label>
+                        <input type="text" 
+                        id="languageInput" 
+                        placeholder="Enter lang" 
+                      />
+                    </div>
+                    <button type="button" onClick={props.handleAddLanguage}>Add language</button>
+                </div>
+                
             </form>
         </div>
     )
