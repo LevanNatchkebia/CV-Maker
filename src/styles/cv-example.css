@@ -20,6 +20,12 @@
     padding: 1rem;
 }
 
+.main-side {
+    background-color: white;
+    max-width: 400px;
+    padding: 1rem;
+}
+
 
 .first-part{
     text-align: center;
@@ -88,5 +94,11 @@
 }
 
 .language_section li {
-    list-style-type: none;
+    list-style-type:none;
+}
+
+.language_section li:hover {
+    text-decoration: line-through;
+    color: rgb(200, 11, 11);
+    cursor: pointer;
 }

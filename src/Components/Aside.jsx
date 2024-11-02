@@ -67,7 +67,7 @@ function Aside(props){
                         <ul>
                             {languages.map((language, index) => 
                                 <li key={index} onClick={() => props.handleRemoveLanguage(index)}>
-                                    {language}
+                                        {language}  
                                 </li>
                             )}
                         </ul>
